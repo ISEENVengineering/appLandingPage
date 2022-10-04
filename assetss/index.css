@@ -1,0 +1,158 @@
+:root {
+    --paddingContainer: 50px 0;
+    --colorTitle: #000000;
+    --colorParagr1: #d8d8d8b4;
+    --colorSuccessInfo: #2091F8;
+
+}
+
+.divider {
+    width: 100%;
+    border: solid 1px #000000;
+}
+
+body {
+    background-color: rgba(79, 153, 97, 0.247);
+}
+
+
+.container {
+    width: 90%;
+    padding: var(--paddingContainer);
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1200px;
+    ;
+}
+
+.headerContainer {
+    z-index: 100;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+}
+
+.headerContainer::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('./Imgs/Fondos/jsc.png');
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 96%, 0 75%);
+    background-size: cover;
+}
+
+nav {
+    --paddingContainer: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.home {
+    width: 40%;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.26);
+    border-radius: 0 30px 70px 0;
+}
+
+.logo {
+    width: 100px;
+    height: 90px;
+    border-radius: 5px 65px 5px 45px;
+    box-shadow: 7px 7px 15px var(--colorParagr1);
+    background-color: rgba(173, 241, 192, 0.301);
+    background-image: url('./Imgs/Icos/Logo/ise2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -5px;
+}
+
+.slogan {
+    margin-left: 15px;
+}
+
+.navTittle {
+    font-weight: 300px;
+    text-shadow: 7px 7px 10px var(--colorParagr1);
+    color: var(--colorTitle);
+    margin-left: 15px;
+}
+
+.navSubTittle {
+    font-weight: 200px;
+    text-shadow: 3px 3px 5px var(--colorParagr1);
+    color: var(--colorTitle);
+    margin-left: 15px;
+}
+
+.navLinks {
+    margin-left: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+    padding-right: 5%
+}
+
+.navItems {
+    list-style: none;
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--colorParagr1);
+}
+
+.navMenu {
+    cursor: pointer;
+    margin-left: auto;
+    display: var(--show, none);
+}
+
+.sectContainer {
+    max-width: 80%;
+    display: grid;
+    margin: 0 auto;
+    text-shadow: 7px 7px 10px var(--colorTitle);
+    color: var(--colorParagr1);
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+
+}
+
+.sectTitle {
+    font-size: 2em;
+}
+
+.sectParagrapho {
+    padding: 0 50px;
+    margin: 10px 0 50px 0;
+    font-size: large;
+}
+
+.btn_freeConsult {
+    background-color: var(--colorSuccessInfo);
+    border-radius: 30px;
+    justify-self: center;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: larger;
+    color: var(--colorParagr1);
+    box-shadow: 7px 7px 10px var(--colorTitle);
+
+}
