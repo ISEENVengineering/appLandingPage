@@ -2,8 +2,8 @@
     --paddingContainer: 50px 0;
     --colorTitle: #000000;
     --colorParagr1: #d8d8d8b4;
-    --colorSuccessInfo: #2091F8;
-
+    --colorSuccessInfo: #1f3d58;
+    --code: "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";
 }
 
 .divider {
@@ -156,3 +156,24 @@ nav {
     box-shadow: 7px 7px 10px var(--colorTitle);
 
 }
+.aboutContainer .subTitle{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto  ;
+}
+
+.aboutArticle {
+    text-align: center;
+}
+
+.aboutImg {}
+
+.aboutTitle {}
+
+.aboutParagraph {}
