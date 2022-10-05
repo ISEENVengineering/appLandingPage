@@ -18,22 +18,23 @@ body {
 
 .container {
     width: 90%;
-    padding: var(--paddingContainer);
+    padding: 0;
     margin: 0 auto;
-    overflow: hidden;
     max-width: 1200px;
-    ;
 }
 
 .headerContainer {
     z-index: 100;
     position: relative;
-    display: grid;
-    grid-template-rows: 100px 1fr;
     width: 100%;
     height: 100vh;
     min-height: 600px;
     max-height: 800px;
+    width: 90%;
+    padding: var(--paddingContainer);
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1200px;
 }
 
 .headerContainer::before {
@@ -54,6 +55,8 @@ nav {
     width: 100%;
     display: flex;
     align-items: center;
+    display: grid;
+    grid-template-rows: 100px 1fr;
 }
 
 .home {
@@ -97,7 +100,10 @@ nav {
 }
 
 .navLinks {
+    overflow: visible;
     margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -161,7 +167,6 @@ nav {
     width: 100%;
     text-align: center;
     margin: 30px 0;
-
 }
 
 .aboutContainer .aboutParagraph {
@@ -194,28 +199,103 @@ nav {
     margin: 10px 0;
 }
 
-.aboutParagraph {}
+.aboutParagraph {
+    padding: 0 20px;
+}
 
 .productsContainer {
     background-color: #000000;
-    opacity: 0.4;
     background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #000000 4px), repeating-linear-gradient(#1f3d5855, #1f3d58);
-    padding: 50px;
+    padding: 10px 50px;
     margin: 0 0 50px 0;
     width: 100%;
-
+}
+.productsContainer .Title {
+    width: 100%;
+    color: var(--colorParagr1);
+    text-align: center;
+    margin: 30px 0;
 }
 
 .products {
-    background-color: #1f3d58;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
-    
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+
 }
+
 .product {
     text-align: center;
+    padding: 0 10px 30px 10px;
+    margin: 10px;
+    color: var(--colorParagr1);
 }
 
 .products figure img {
-    width: 70%;
+    width: 100%;
+}
+
+.product .subTitle{
+    margin: 20px 0 5px 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 100px) and (max-width: 850px) {
+
+    .home {
+        width: 100%;
+        padding: 10px;
+        display: block;
+    }
+
+    .headerContainer {
+        max-height: auto;
+    }
+
+    .headerContainer::before {
+        height: 1000px;
+    }
+}
+
+@media (min-width: 100px) and (max-width: 700px) {
+    .navLinks {
+        width: 100%;
+        display: block;
+    }
+
+    .navItems {
+        width: 100%;
+        margin: 29px auto;
+
+    }
+}
+
+@media (max-width: 500px) and (max-height: 800px) {
+    .navLinks {
+        display: none;
+    }
+    .btn_menu{
+        margin-left: auto;
+        margin-top: -50px;
+        margin-bottom: 20px;
+        width: 50px;
+        height: 50px;
+        background:url('./Imgs/Icos/btn_menu.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .btn_menu:hover{
+        border-radius: 10px;
+        background-color: var(--colorParagr1);
+    }
+    .sectContainer{
+        margin: 50px auto;
+    }
+    .headerContainer{
+        height: 10px;
+    }
+    .sectParagrapho{
+        display: none;
+    }
 }
